@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_add"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        style="@style/TextView_black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_add" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_account_value"
+        style="@style/TextView_grey"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/account_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_usd"
+        style="@style/TextView_black"
+        android:layout_marginHorizontal="5dp"
+        android:text="$0.0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_account_value" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send"
+        style="@style/Button"
+        android:layout_marginHorizontal="5dp"
+        android:text="@string/send"
+        app:backgroundTint="@color/black"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_arrow_upward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_usd" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_receive"
+        style="@style/Button"
+        android:layout_marginHorizontal="5dp"
+        android:text="@string/receive"
+        app:backgroundTint="@color/black"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_arrow_upward"
+        app:layout_constraintStart_toEndOf="@id/btn_send"
+        app:layout_constraintTop_toBottomOf="@id/tv_usd" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_send" />
+</androidx.constraintlayout.widget.ConstraintLayout>

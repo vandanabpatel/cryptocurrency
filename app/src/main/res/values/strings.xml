@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Crypto</string>
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="today">Today</string>
+    <string name="send">Send</string>
+    <string name="receive">Receive</string>
+
+    <string name="msg_no_internet">No Internet. Please check your network status and try again</string>
+    <string name="error_standard_error_0">It seems like there is an error. Please check configuration and try again.</string>
+
+    <string name="account_value">Account Value</string>
+</resources>
