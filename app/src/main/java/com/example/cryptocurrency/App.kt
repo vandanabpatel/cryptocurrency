@@ -13,6 +13,7 @@ class App : Application() {
     companion object {
         private var instance: App? = null
 
+        // return context which is accessible throughout the application
         fun appContext(): Context {
             return instance!!.applicationContext
         }
